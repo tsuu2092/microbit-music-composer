@@ -1,9 +1,13 @@
 input.onButtonPressed(Button.A, function () {
-    music.playTone(262, music.beat(BeatFraction.Whole))
+    if (role == "admin") {
+        radio.sendString("user")
+    }
 })
-input.onGesture(Gesture.Shake, function () {
-    music.playTone(294, music.beat(BeatFraction.Whole))
+radio.onReceivedString(function (receivedString) {
+    role = "user"
 })
-basic.forever(function () {
-	
+input.onButtonPressed(Button.B, function () {
+    basic.showString(role)
 })
+let role = ""
+role = "admin"
