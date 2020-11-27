@@ -1,5 +1,5 @@
 {
-    "name": "Music composer functions",
+    "name": "show current note pin 1",
     "description": "",
     "dependencies": {
         "core": "*",

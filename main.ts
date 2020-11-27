@@ -2,7 +2,7 @@ input.onPinPressed(TouchPin.P0, function () {
     play_song()
 })
 function display_current_note () {
-    music.playTone(notes[current_note], music.beat(BeatFraction.Half))
+    music.playTone(notes[current_note], music.beat(BeatFraction.Quarter))
 }
 input.onButtonPressed(Button.A, function () {
     lower_note()
@@ -26,7 +26,7 @@ input.onButtonPressed(Button.B, function () {
     higher_note()
 })
 input.onPinPressed(TouchPin.P1, function () {
-    basic.showNumber(song.length)
+    basic.showNumber(current_note)
 })
 function play_song () {
     for (let value of song) {
@@ -34,7 +34,7 @@ function play_song () {
     }
 }
 function higher_note () {
-    if (current_note < notes.length) {
+    if (current_note < notes.length - 1) {
         current_note = current_note + 1
     }
     display_current_note()
