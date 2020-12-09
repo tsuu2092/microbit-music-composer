@@ -1,6 +1,9 @@
 input.onPinPressed(TouchPin.P0, function () {
     play_song()
 })
+function delete_last_note () {
+    song.pop()
+}
 input.onButtonPressed(Button.A, function () {
     lower_note()
 })
@@ -11,7 +14,7 @@ function lower_note () {
     play_current_note()
 }
 input.onPinPressed(TouchPin.P2, function () {
-    song.pop()
+    delete_last_note()
 })
 function save_current_note () {
     song.push(notes[current_note])
@@ -23,10 +26,13 @@ input.onButtonPressed(Button.B, function () {
     higher_note()
 })
 input.onPinPressed(TouchPin.P1, function () {
-    song.push(0)
+    add_rest()
 })
 function play_current_note () {
     music.playTone(notes[current_note], music.beat(BeatFraction.Quarter))
+}
+function add_rest () {
+    song.push(0)
 }
 function play_song () {
     for (let value of song) {
