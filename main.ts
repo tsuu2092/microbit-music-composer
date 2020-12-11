@@ -49,6 +49,7 @@ function higher_note () {
 let song: number[] = []
 let current_note = 0
 let notes: number[] = []
+basic.showIcon(IconNames.EigthNote)
 music.setVolume(255)
 music.setTempo(120)
 notes = [131, 139, 147, 156, 165, 175, 185, 196, 208, 220, 233, 247, 262, 277, 294, 311, 330, 349, 370, 392, 415, 440, 466, 494, 523, 554, 587, 622, 659, 698, 740, 784, 831, 880, 932, 988, 1046]
