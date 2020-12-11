@@ -1,6 +1,3 @@
-input.onPinPressed(TouchPin.P0, function () {
-    play_song()
-})
 function delete_last_note () {
     song.pop()
 }
@@ -32,6 +29,9 @@ input.onPinPressed(TouchPin.P1, function () {
 function play_current_note () {
     music.playTone(notes[current_note], music.beat(BeatFraction.Quarter))
 }
+input.onGesture(Gesture.Shake, function () {
+    play_song()
+})
 function add_rest () {
     song.push(0)
 }
