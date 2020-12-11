@@ -51,9 +51,9 @@ function higher_note () {
     }
     play_current_note()
 }
+let song: number[] = []
 let current_note = 0
 let notes: number[] = []
-let song : number[] = []
 basic.showIcon(IconNames.EigthNote)
 music.setVolume(255)
 music.setTempo(120)
