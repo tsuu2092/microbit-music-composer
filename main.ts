@@ -18,6 +18,7 @@ input.onPinPressed(TouchPin.P2, function () {
 })
 function save_current_note () {
     song.push(notes[current_note])
+    play_current_note()
 }
 input.onButtonPressed(Button.AB, function () {
     save_current_note()
