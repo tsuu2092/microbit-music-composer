@@ -1,5 +1,25 @@
 
-> Open this page at [https://khaitruong922.github.io/cosc2500-microbit/](https://khaitruong922.github.io/cosc2500-microbit/)
+# Microbit Music Composer
+
+## Description
+
+MicroBit Music Composer allows you to compose and play your music on MicroBit.
+
+The musical range of Microbit Music Composer is from C3 to C6 (37 notes).
+
+Notes are played in half beats at 120 BPM (can be edited in code).
+
+## How to use
+
+Press A or B to shift the current note by one semitone down or up, respectively. 
+
+Press both A and B to append the current note into the song.
+
+Press Pin 1 to append a rest note.
+
+Press Pin 2 to delete the latest note.
+
+Shake the MicroBit to play the song.
 
 ## Use as Extension
 
